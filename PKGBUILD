@@ -19,7 +19,7 @@ pkgbase="zfs-linux-git"
 pkgname=("zfs-linux-git" "zfs-linux-git-headers")
 _commit='5a42ef04fd390dc96fbbf31bc9f3d05695998211'
 _zfsver="2020.04.01.r5838.g5a42ef04f"
-_kernelver="5.5.13.arch2-1"
+_kernelver="5.6.2.arch1-2"
 _extramodules="${_kernelver/.arch/-arch}"
 
 pkgver="${_zfsver}_$(echo ${_kernelver} | sed s/-/./g)"
@@ -28,9 +28,17 @@ makedepends=("linux-headers=${_kernelver}" "git")
 arch=("x86_64")
 url="https://zfsonlinux.org/"
 source=("git+https://github.com/zfsonlinux/zfs.git#commit=${_commit}"
-        "linux-5.5-compat-blkg_tryget.patch")
+        "linux-5.5-compat-blkg_tryget.patch"
+        "linux-5.6-compat-struct-proc_ops.patch"
+        "linux-5.6-compat-timestamp_truncate.patch"
+        "linux-5.6-compat-ktime_get_raw_ts64.patch"
+        "linux-5.6-compat-time_t.patch")
 sha256sums=("SKIP"
-            "daae58460243c45c2c7505b1d88dcb299ea7d92bcf3f41d2d30bc213000bb1da")
+            "daae58460243c45c2c7505b1d88dcb299ea7d92bcf3f41d2d30bc213000bb1da"
+            "05ca889a89b1e57d55c1b7d4d3013398a3e5a69d0fad27278aad701f0bb6e802"
+            "5ad4393b334a8f685212f47b44e98dc468c70214ee5dbbab24cc95c4f310ae39"
+            "7c6ebee72d864160b376fc18017c81f499f177b7d9265f565de859139805a277"
+            "06f7ade5adcbfe77cb234361f8b2aca6d6e78fcd136da6d3a70048b5e92c62bb")
 license=("CDDL")
 depends=("kmod" "zfs-utils-git=${_zfsver}" "linux=${_kernelver}")
 
