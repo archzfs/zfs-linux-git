@@ -17,9 +17,9 @@
 #
 pkgbase="zfs-linux-git"
 pkgname=("zfs-linux-git" "zfs-linux-git-headers")
-_commit='813c8564ee756ad0a51cd5a67750b97292611efe'
-_zfsver="2020.04.14.r5855.g813c8564e"
-_kernelver="5.6.4.arch1-1"
+_commit='a84c92f93364116b5e7f4685eb6d665526251a51'
+_zfsver="2020.04.21.r5861.ga84c92f93"
+_kernelver="5.6.5.arch3-1"
 _extramodules="${_kernelver/.arch/-arch}"
 
 pkgver="${_zfsver}_$(echo ${_kernelver} | sed s/-/./g)"
