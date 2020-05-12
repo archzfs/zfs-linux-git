@@ -1,5 +1,5 @@
 pkgbase = zfs-linux-git
-	pkgver = 2020.05.10.r5897.g7fcf82451_5.6.11.arch1.1
+	pkgver = 2020.05.11.r5901.gb29e31d80_5.6.11.arch1.1
 	pkgrel = 1
 	url = https://zfsonlinux.org/
 	arch = x86_64
@@ -7,9 +7,9 @@ pkgbase = zfs-linux-git
 	makedepends = linux-headers=5.6.11.arch1-1
 	makedepends = git
 	depends = kmod
-	depends = zfs-utils-git=2020.05.10.r5897.g7fcf82451
+	depends = zfs-utils-git=2020.05.11.r5901.gb29e31d80
 	depends = linux=5.6.11.arch1-1
-	source = git+https://github.com/zfsonlinux/zfs.git#commit=7fcf82451c4b75afe327c77683f66bf0c6396a48
+	source = git+https://github.com/zfsonlinux/zfs.git#commit=b29e31d80d6cb78dbd889e9b529333944b4c3ba1
 	source = linux-5.5-compat-blkg_tryget.patch
 	source = linux-5.6-compat-struct-proc_ops.patch
 	source = linux-5.6-compat-timestamp_truncate.patch
