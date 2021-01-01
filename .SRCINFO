@@ -1,16 +1,18 @@
 pkgbase = zfs-linux-git
-	pkgver = 2020.12.21.r6475.g0c763f76b_5.9.14.arch1.1
+	pkgver = 2020.12.30.r6489.g064c2cf40_5.10.3.arch1.1
 	pkgrel = 1
 	url = https://zfsonlinux.org/
 	arch = x86_64
 	license = CDDL
-	makedepends = linux-headers=5.9.14.arch1-1
+	makedepends = linux-headers=5.10.3.arch1-1
 	makedepends = git
 	depends = kmod
-	depends = zfs-utils-git=2020.12.21.r6475.g0c763f76b
-	depends = linux=5.9.14.arch1-1
-	source = git+https://github.com/zfsonlinux/zfs.git#commit=0c763f76b1bc6d5e38a638493d13c9b54222743d
+	depends = zfs-utils-git=2020.12.30.r6489.g064c2cf40
+	depends = linux=5.10.3.arch1-1
+	source = git+https://github.com/zfsonlinux/zfs.git#commit=064c2cf40ea367f0b7608a3e8b537f87190f52cb
+	source = autoconf-270-compatibility.patch
 	sha256sums = SKIP
+	sha256sums = dc82ee4e62f76b68d972423909c38ced28dea876c6ef4f19037a24a8dbb2fff5
 
 pkgname = zfs-linux-git
 	pkgdesc = Kernel modules for the Zettabyte File System.
