@@ -17,9 +17,9 @@
 #
 pkgbase="zfs-linux-git"
 pkgname=("zfs-linux-git" "zfs-linux-git-headers")
-_commit='064c2cf40ea367f0b7608a3e8b537f87190f52cb'
-_zfsver="2020.12.30.r6489.g064c2cf40"
-_kernelver="5.10.3.arch1-1"
+_commit='06346cc5b50bef7327f7c901b92cbadab7fd7265'
+_zfsver="2021.01.02.r6491.g06346cc5b"
+_kernelver="5.10.4.arch2-1"
 _extramodules="${_kernelver/.arch/-arch}"
 
 pkgver="${_zfsver}_$(echo ${_kernelver} | sed s/-/./g)"
@@ -33,10 +33,6 @@ sha256sums=("SKIP"
                         "dc82ee4e62f76b68d972423909c38ced28dea876c6ef4f19037a24a8dbb2fff5")
 license=("CDDL")
 depends=("kmod" "zfs-utils-git=${_zfsver}" "linux=${_kernelver}")
-prepare() {
-    cd "${srcdir}/zfs"
-    patch -Np1 -i ${srcdir}/autoconf-270-compatibility.patch
-}
 
 build() {
     cd "${srcdir}/zfs"
