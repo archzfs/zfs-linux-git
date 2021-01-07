@@ -17,9 +17,9 @@
 #
 pkgbase="zfs-linux-git"
 pkgname=("zfs-linux-git" "zfs-linux-git-headers")
-_commit='06346cc5b50bef7327f7c901b92cbadab7fd7265'
-_zfsver="2021.01.02.r6491.g06346cc5b"
-_kernelver="5.10.4.arch2-1"
+_commit='f11b09dec3d33ba11bc3bf7644bdde558d08ad76'
+_zfsver="2021.01.07.r6492.gf11b09dec"
+_kernelver="5.10.5.arch1-1"
 _extramodules="${_kernelver/.arch/-arch}"
 
 pkgver="${_zfsver}_$(echo ${_kernelver} | sed s/-/./g)"
@@ -27,10 +27,8 @@ pkgrel=1
 makedepends=("linux-headers=${_kernelver}" "git")
 arch=("x86_64")
 url="https://zfsonlinux.org/"
-source=("git+https://github.com/zfsonlinux/zfs.git#commit=${_commit}"
-              "autoconf-270-compatibility.patch")
-sha256sums=("SKIP"
-                        "dc82ee4e62f76b68d972423909c38ced28dea876c6ef4f19037a24a8dbb2fff5")
+source=("git+https://github.com/zfsonlinux/zfs.git#commit=${_commit}")
+sha256sums=("SKIP")
 license=("CDDL")
 depends=("kmod" "zfs-utils-git=${_zfsver}" "linux=${_kernelver}")
 
