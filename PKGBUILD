@@ -34,7 +34,7 @@ depends=("kmod" "zfs-utils-git=${_zfsver}" "linux=${_kernelver}")
 
 build() {
     cd "${srcdir}/zfs"
-    ./autogen.sh || true
+    ./autogen.sh
     ./configure --prefix=/usr --sysconfdir=/etc --sbindir=/usr/bin --libdir=/usr/lib \
                 --datadir=/usr/share --includedir=/usr/include --with-udevdir=/usr/lib/udev \
                 --libexecdir=/usr/lib --with-config=kernel \
