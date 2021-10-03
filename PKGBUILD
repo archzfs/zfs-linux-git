@@ -17,8 +17,8 @@
 #
 pkgbase="zfs-linux-git"
 pkgname=("zfs-linux-git" "zfs-linux-git-headers")
-_commit='ce2bdcedf549b2d83ae9df23a3fa0188b33327b7'
-_zfsver="2021.09.24.r7112.gce2bdcedf"
+_commit='60b618a967b1bb60225139a5e687a8cbd38041e0'
+_zfsver="2021.10.02.r7115.g60b618a96"
 _kernelver="5.14.8.arch1-1"
 _extramodules="${_kernelver/.arch/-arch}"
 
@@ -51,7 +51,7 @@ package_zfs-linux-git() {
     conflicts=("zfs-dkms" "zfs-dkms-git" "zfs-dkms-rc" "spl-dkms" "spl-dkms-git" 'zfs-linux' 'spl-linux-git' 'spl-linux')
     replaces=("spl-linux-git")
     cd "${srcdir}/zfs"
-    make DESTDIR="${pkgdir}" INSTALL_MOD_PATH=/usr install
+    make DESTDIR="${pkgdir}" INSTALL_MOD_PATH=${pkgdir}/usr install
     # Remove src dir
     rm -r "${pkgdir}"/usr/src
 }
