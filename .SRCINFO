@@ -1,15 +1,15 @@
 pkgbase = zfs-linux-git
-	pkgver = 2022.08.12.r7983.gd22dd77c4d_5.19.2.arch1.1
+	pkgver = 2022.08.24.r7986.ga582d52993_5.19.3.arch1.1
 	pkgrel = 1
 	url = https://zfsonlinux.org/
 	arch = x86_64
 	license = CDDL
-	makedepends = linux-headers=5.19.2.arch1-1
+	makedepends = linux-headers=5.19.3.arch1-1
 	makedepends = git
 	depends = kmod
-	depends = zfs-utils-git=2022.08.12.r7983.gd22dd77c4d
-	depends = linux=5.19.2.arch1-1
-	source = git+https://github.com/zfsonlinux/zfs.git#commit=d22dd77c4d4556373b995121412c4abac02bcf8a
+	depends = zfs-utils-git=2022.08.24.r7986.ga582d52993
+	depends = linux=5.19.3.arch1-1
+	source = git+https://github.com/zfsonlinux/zfs.git#commit=a582d52993134905f2e96cebe7aff410f29b1ad8
 	sha256sums = SKIP
 
 pkgname = zfs-linux-git
