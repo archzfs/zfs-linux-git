@@ -17,18 +17,18 @@
 #
 pkgbase="zfs-linux-git"
 pkgname=("zfs-linux-git" "zfs-linux-git-headers")
-_commit='a379083d9f2bb9dd80f4636e593bcb2c1d94d11b'
-_zfsver="2023.01.17.r8343.ga379083d9f"
-_kernelver="6.1.6.arch1-3"
-_kernelver_full="6.1.6.arch1-3"
+_commit='6017fd9377b217481097dda1206132ec81fcc8ef'
+_zfsver="2023.02.02.r8368.g6017fd9377"
+_kernelver="6.1.9.arch1-1"
+_kernelver_full="6.1.9.arch1-1"
 _extramodules="${_kernelver_full/.arch/-arch}"
 
 pkgver="${_zfsver}_$(echo ${_kernelver} | sed s/-/./g)"
 pkgrel=1
 makedepends=("linux-headers=${_kernelver}" "git")
 arch=("x86_64")
-url="https://zfsonlinux.org/"
-source=("git+https://github.com/zfsonlinux/zfs.git#commit=${_commit}")
+url="https://openzfs.org/"
+source=("git+https://github.com/openzfs/zfs.git#commit=${_commit}")
 sha256sums=("SKIP")
 license=("CDDL")
 depends=("kmod" "zfs-utils-git=${_zfsver}" "linux=${_kernelver}")
