@@ -17,10 +17,10 @@
 #
 pkgbase="zfs-linux-git"
 pkgname=("zfs-linux-git" "zfs-linux-git-headers")
-_commit='d520f6434247fcfe9e37a117267eefb71276e255'
-_zfsver="2023.03.17.r8493.gd520f64342"
-_kernelver="6.2.7.arch1-1"
-_kernelver_full="6.2.7.arch1-1"
+_commit='3399a30ee02d0d31ba2d43d0ce0a2fd90d5c575d'
+_zfsver="2023.03.31.r8515.g3399a30ee0"
+_kernelver="6.2.9.arch1-1"
+_kernelver_full="6.2.9.arch1-1"
 _extramodules="${_kernelver_full/.arch/-arch}"
 
 pkgver="${_zfsver}_$(echo ${_kernelver} | sed s/-/./g)"
@@ -28,8 +28,10 @@ pkgrel=1
 makedepends=("linux-headers=${_kernelver}" "git")
 arch=("x86_64")
 url="https://openzfs.org/"
-source=("git+https://github.com/openzfs/zfs.git#commit=${_commit}")
-sha256sums=("SKIP")
+source=("git+https://github.com/openzfs/zfs.git#commit=${_commit}"
+                "linux-6.3-compat-add-another-bdev_io_acct-case.patch")
+sha256sums=("SKIP"
+                          "14b099062abdb8923266f8f39c50d4b98755e6324ae6ce36d322c361b85387ee")
 license=("CDDL")
 depends=("kmod" "zfs-utils-git=${_zfsver}" "linux=${_kernelver}")
 

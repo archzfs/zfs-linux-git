@@ -1,16 +1,18 @@
 pkgbase = zfs-linux-git
-	pkgver = 2023.03.17.r8493.gd520f64342_6.2.7.arch1.1
+	pkgver = 2023.03.31.r8515.g3399a30ee0_6.2.9.arch1.1
 	pkgrel = 1
 	url = https://openzfs.org/
 	arch = x86_64
 	license = CDDL
-	makedepends = linux-headers=6.2.7.arch1-1
+	makedepends = linux-headers=6.2.9.arch1-1
 	makedepends = git
 	depends = kmod
-	depends = zfs-utils-git=2023.03.17.r8493.gd520f64342
-	depends = linux=6.2.7.arch1-1
-	source = git+https://github.com/openzfs/zfs.git#commit=d520f6434247fcfe9e37a117267eefb71276e255
+	depends = zfs-utils-git=2023.03.31.r8515.g3399a30ee0
+	depends = linux=6.2.9.arch1-1
+	source = git+https://github.com/openzfs/zfs.git#commit=3399a30ee02d0d31ba2d43d0ce0a2fd90d5c575d
+	source = linux-6.3-compat-add-another-bdev_io_acct-case.patch
 	sha256sums = SKIP
+	sha256sums = 14b099062abdb8923266f8f39c50d4b98755e6324ae6ce36d322c361b85387ee
 
 pkgname = zfs-linux-git
 	pkgdesc = Kernel modules for the Zettabyte File System.
