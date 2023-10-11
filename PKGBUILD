@@ -17,10 +17,10 @@
 #
 pkgbase="zfs-linux-git"
 pkgname=("zfs-linux-git" "zfs-linux-git-headers")
-_commit='ec994486b1ef81d09562473a853d3599470911b5'
-_zfsver="2023.09.27.r8783.gec994486b1"
-_kernelver="6.5.5.arch1-1"
-_kernelver_full="6.5.5.arch1-1"
+_commit='9facf2d1ad0c4857de1d47a2a14e882a3fb78b89'
+_zfsver="2023.10.10.r8817.g9facf2d1ad"
+_kernelver="6.5.6.arch2-1"
+_kernelver_full="6.5.6.arch2-1"
 _extramodules="${_kernelver_full/.arch/-arch}"
 
 pkgver="${_zfsver}_$(echo ${_kernelver} | sed s/-/./g)"
