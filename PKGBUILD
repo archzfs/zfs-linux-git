@@ -19,8 +19,8 @@ pkgbase="zfs-linux-git"
 pkgname=("zfs-linux-git" "zfs-linux-git-headers")
 _commit='a94860a6dee1c07bb96ee36dafcba40b804560cc'
 _zfsver="2023.11.20.r8886.ga94860a6de"
-_kernelver="6.6.1.arch1-1"
-_kernelver_full="6.6.1.arch1-1"
+_kernelver="6.6.2.arch1-1"
+_kernelver_full="6.6.2.arch1-1"
 _extramodules="${_kernelver_full/.arch/-arch}"
 
 pkgver="${_zfsver}_$(echo ${_kernelver} | sed s/-/./g)"
@@ -28,8 +28,8 @@ pkgrel=1
 makedepends=("linux-headers=${_kernelver}" "git")
 arch=("x86_64")
 url="https://openzfs.org/"
-source=("git+https://github.com/openzfs/zfs.git#commit=${_commit}" "linux-6.6-compat.patch")
-sha256sums=("SKIP" "c2da9ec5d15335fa35b3380d66ff1da1f1cb2e173ac7eb8fb0c9205de8d1fad0")
+source=("git+https://github.com/openzfs/zfs.git#commit=${_commit}")
+sha256sums=("SKIP")
 license=("CDDL")
 depends=("kmod" "zfs-utils-git=${_zfsver}" "linux=${_kernelver}")
 
