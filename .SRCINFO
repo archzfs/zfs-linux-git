@@ -10,9 +10,7 @@ pkgbase = zfs-linux-git
 	depends = zfs-utils-git=2024.02.16.r9031.gaf4da5ccf2
 	depends = linux=6.7.5.arch1-1
 	source = git+https://github.com/openzfs/zfs.git#commit=af4da5ccf28e1de6d4f6771a8d9d7cc578aba087
-	source = linux-6.7-compat.patch
 	sha256sums = SKIP
-	sha256sums = 43bca1a6717bfc77d42a4c51656c38674c6be8d7ec46f04c7febcdafd9295916
 
 pkgname = zfs-linux-git
 	pkgdesc = Kernel modules for the Zettabyte File System.
