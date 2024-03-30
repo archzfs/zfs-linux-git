@@ -17,10 +17,10 @@
 #
 pkgbase="zfs-linux-git"
 pkgname=("zfs-linux-git" "zfs-linux-git-headers")
-_commit='8f2f6cd2ac688916adb2caf979daf95365ccb48f'
-_zfsver="2024.02.26.r9034.g8f2f6cd2ac"
-_kernelver="6.8.1.arch1-1"
-_kernelver_full="6.8.1.arch1-1"
+_commit='39be46f43f96fb7420386d03751b01f5cb376d6b'
+_zfsver="2024.03.29.r9067.g39be46f43f"
+_kernelver="6.8.2.arch2-1"
+_kernelver_full="6.8.2.arch2-1"
 _extramodules="${_kernelver_full/.arch/-arch}"
 
 pkgver="${_zfsver}_$(echo ${_kernelver} | sed s/-/./g)"
@@ -32,12 +32,6 @@ source=("git+https://github.com/openzfs/zfs.git#commit=${_commit}" "enforce-kern
 sha256sums=("SKIP" "c5a9f546638c706844d5aff99f40366db1684679c3318d3a4093e0746748a711" "b875c877069a4c75c7b2b4b22d048e66f415b86f862ef6b3b83d3524694cc973" "1bc3b2e79e481b1bf41e78f9d142de8e97326288ecdc97f8db65496b7c4fd63b")
 license=("CDDL")
 depends=("kmod" "zfs-utils-git=${_zfsver}" "linux=${_kernelver}")
-prepare() {
-    cd "${srcdir}/zfs"
-    patch -Np1 -i ${srcdir}/enforce-kernel-max-version.patch
-    patch -Np1 -i ${srcdir}/linux-6.8-compat.patch
-    patch -Np1 -i ${srcdir}/kernel-6.8-meta.patch
-}
 
 build() {
     cd "${srcdir}/zfs"

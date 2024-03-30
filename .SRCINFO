@@ -1,15 +1,15 @@
 pkgbase = zfs-linux-git
-	pkgver = 2024.02.26.r9034.g8f2f6cd2ac_6.8.1.arch1.1
+	pkgver = 2024.03.29.r9067.g39be46f43f_6.8.2.arch2.1
 	pkgrel = 1
 	url = https://openzfs.org/
 	arch = x86_64
 	license = CDDL
-	makedepends = linux-headers=6.8.1.arch1-1
+	makedepends = linux-headers=6.8.2.arch2-1
 	makedepends = git
 	depends = kmod
-	depends = zfs-utils-git=2024.02.26.r9034.g8f2f6cd2ac
-	depends = linux=6.8.1.arch1-1
-	source = git+https://github.com/openzfs/zfs.git#commit=8f2f6cd2ac688916adb2caf979daf95365ccb48f
+	depends = zfs-utils-git=2024.03.29.r9067.g39be46f43f
+	depends = linux=6.8.2.arch2-1
+	source = git+https://github.com/openzfs/zfs.git#commit=39be46f43f96fb7420386d03751b01f5cb376d6b
 	source = enforce-kernel-max-version.patch
 	source = linux-6.8-compat.patch
 	source = kernel-6.8-meta.patch
